@@ -57,7 +57,7 @@
     <div class="mb-5">
         <h2 class="section-title">About Me</h2>
         <p class="lead">
-            I am a passionate developer who loves learning new technologies and creating
+            I am a 3rd Year College Student who loves learning new technologies and creating
             meaningful digital solutions. I enjoy coding, building applications, and exploring
             innovative ideas that can help improve user experiences.
         </p>
