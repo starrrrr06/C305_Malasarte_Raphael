@@ -4,11 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>My Portfolio</title>
-
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-
 <style>
-  
 body {
   background-color: #0d0d0d;
   color: #ffffff;
@@ -54,6 +51,14 @@ body.light-mode #main-navbar .navbar-nav .nav-link {
 }
 body.light-mode #main-navbar .navbar-nav .nav-link:hover {
   color: var(--purple);
+}
+body.light-mode .btn-outline-light {
+  color: var(--purple);
+  border-color: var(--purple);
+}
+body.light-mode .btn-outline-light:hover {
+  background-color: var(--purple);
+  color: #fff;
 }
 
 #hero {
@@ -226,11 +231,11 @@ body.light-mode #theme-toggle {
 </style>
 </head>
 
-<body>
+<body class="light-mode">
 <nav class="navbar navbar-expand-lg fixed-top" id="main-navbar">
   <div class="container">
     <a class="navbar-brand" href="#hero">RM</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon" style="color: var(--purple);">&#9776;</span>
     </button>
     <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarNav">
@@ -241,15 +246,12 @@ body.light-mode #theme-toggle {
         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
-
-      <!-- Logout Button Added -->
       @if(session()->has('logged_in'))
         <form method="GET" action="/logout" class="d-inline me-2">
           <button type="submit" class="btn btn-outline-light">Logout</button>
         </form>
       @endif
-
-      <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">🌙</button>
+      <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">🌞</button>
     </div>
   </div>
 </nav>
@@ -257,7 +259,7 @@ body.light-mode #theme-toggle {
 <div class="container py-5">
   <section id="hero">
     <div>
-      <p style="letter-spacing:3px; color:var(--purple)">WELCOME TO MY WORLD</p>
+      <p style="letter-spacing:3px; color:var(--purple)">WELCOME TO MY PORTFOLIO</p>
       <h1>Hi, I'm Raprap<br />a Web Designer</h1>
       <p class="mt-3">3rd year student who loves learning and exploring the world of coding. I focus on clean, minimalistic web design and user-friendly layouts.</p>
       <a href="#contact" class="hero-btn">Get in Touch</a>
@@ -388,7 +390,6 @@ body.light-mode #theme-toggle {
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 <script>
 const toggleButton = document.getElementById("theme-toggle");
 const body = document.body;
