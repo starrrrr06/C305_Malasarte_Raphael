@@ -241,6 +241,14 @@ body.light-mode #theme-toggle {
         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
+
+      <!-- Logout Button Added -->
+      @if(session()->has('logged_in'))
+        <form method="GET" action="/logout" class="d-inline me-2">
+          <button type="submit" class="btn btn-outline-light">Logout</button>
+        </form>
+      @endif
+
       <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">🌙</button>
     </div>
   </div>
