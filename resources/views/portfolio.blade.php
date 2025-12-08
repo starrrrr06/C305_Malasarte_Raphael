@@ -246,12 +246,19 @@ body.light-mode #theme-toggle {
         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
-      @if(session()->has('logged_in'))
-        <form method="GET" action="/logout" class="d-inline me-2">
-          <button type="submit" class="btn btn-outline-light">Logout</button>
-        </form>
-      @endif
-      <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">🌞</button>
+
+      <div class="d-flex align-items-center">
+        @if(session()->has('logged_in'))
+          <form method="GET" action="/logout" class="me-2 mb-0">
+            <button type="submit" class="btn btn-outline-light">Logout</button>
+          </form>
+        @else
+          <a href="{{ url('/login') }}" class="btn btn-outline-light me-2">Login</a>
+        @endif
+
+        <button id="theme-toggle" aria-label="Toggle Dark/Light Mode" class="btn btn-outline-light">🌞</button>
+      </div>
+
     </div>
   </div>
 </nav>
