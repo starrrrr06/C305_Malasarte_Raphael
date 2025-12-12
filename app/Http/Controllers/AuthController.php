@@ -50,7 +50,7 @@ class AuthController extends Controller
             'role' => 'user',
         ]);
 
-        return redirect('/')->with('success', 'Account created successfully. Please login.');
+        return redirect('/login')->with('success', 'Account created successfully. Please login.');
     }
 
     public function logout()

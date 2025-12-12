@@ -7,6 +7,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <style>
 body {
+    position: relative; /* 🔥 IMPORTANT FIX */
     background: url('https://cdn.pixabay.com/photo/2016/11/29/09/32/galaxy-1867283_1280.jpg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
@@ -38,7 +39,7 @@ h2 {
 }
 .form-control { 
     border-radius: 8px; 
-    border: 1.5px solid #8C00FF; /* violet border */
+    border: 1.5px solid #8C00FF;
     padding: 10px;
 }
 .form-control:focus {
